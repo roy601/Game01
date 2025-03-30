@@ -1,46 +1,130 @@
-
+/* Global Styles */
 body {
-    background-color: #0a0a23;
-  }
-  
-  #text {
-    background-color: #0a0a23;
-    color: #ffffff;
-    padding: 10px;
-  }
-  
-  #game {
-    max-width: 500px;
-    max-height: 400px;
-    background-color: #ffffff;
-    color: #ffffff;
-    margin: 30px auto 0px;
-    padding: 10px;
-  }
-  
-  #controls,
-  #stats {
-    border: 1px solid #0a0a23;
-    padding: 5px;
-    color: #0a0a23;
-  }
-  
-  #monsterStats {
-    display: none;
-    border: 1px solid #0a0a23;
-    padding: 5px;
-    color: #ffffff;
-    background-color: #c70d0d;
-  }
-  
-  .stat {
-    padding-right: 10px;
-  }
-  
-  button {
-    cursor: pointer;
-    color: #0a0a23;
-    background-color: #feac32;
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border: 3px solid #feac32;
-  }
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: 'Roboto', sans-serif; /* Modern bold font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background-image: linear-gradient(135deg, #000000, #333333);
+}
+
+/* Game Container */
+.game-container {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.1));
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Space out elements evenly */
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border: 3px solid #e0e0e0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Styles */
+header h1 {
+  color: #ffffff;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Stats Section - Square Shape */
+#stats {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 20px;
+  border-radius: 0; /* Square shape */
+  width: 90%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Stat Box */
+.stat-box {
+  font-weight: bold;
+  padding: 8px;
+  color: #e0e0e0;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Display */
+#text {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.2em;
+  width: 90%;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  font-family: 'Roboto', sans-serif; /* Using modern bold font */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Monster Stats - Square Shape */
+#monsterStats {
+  display: none;
+  background: #333333;
+  color: white;
+  padding: 20px;
+  border-radius: 0; /* Square shape */
+  width: 90%;
+  margin-bottom: 20px;
+  border: 2px solid #666666;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Control Buttons */
+#controls {
+  display: flex;
+  flex-direction: column; /* Align buttons vertically */
+  align-items: center; /* Center align the buttons */
+  width: 100%;
+  margin-top: 20px; /* Add space between the text and the buttons */
+}
+
+#controls button {
+  background: linear-gradient(135deg, #444444, #666666);
+  border: 2px solid #888888;
+  color: #e0e0e0;
+  padding: 12px 18px;
+  margin: 8px 0; /* Vertical margin for spacing between buttons */
+  font-size: 1.2em;
+  border-radius: 0; /* Square shape */
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Roboto', sans-serif; /* Modern bold font */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+#controls button:hover {
+  background: linear-gradient(135deg, #666666, #444444);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+#controls button:active {
+  transform: scale(1.02);
+  background: linear-gradient(135deg, #555555, #777777);
+}
+
+/* Hidden Elements */
+.hidden {
+  display: none;
+}
